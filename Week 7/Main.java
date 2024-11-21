@@ -1,3 +1,6 @@
+import java.util.Scanner;
+
+
 class WrongAgeException extends Exception {
     public WrongAgeException(String message) {
         super(message);
@@ -46,31 +49,17 @@ class Son extends Father {
 public class Main {
     public static void main(String[] args) {
         try {
-            
-            System.out.println("Case 1: Valid ages\n");
-            Son son1 = new Son(45, 20); 
+            Scanner scanner = new Scanner(System.in);
 
-            
-            System.out.println("\nCase 2: Invalid father's age\n");
-            Son son2 = new Son(-1, 20); 
 
-        } catch (WrongAgeException | InvalidSonAgeException e) {
-            System.out.println("Exception: " + e.getMessage());
-        }
+            System.out.print("Enter Father's age: ");
+	    int fAge = scanner.nextInt();
 
-        try {
-            
-            System.out.println("\nCase 3: Invalid son's age\n");
-            Son son3 = new Son(30, 30); 
+	    System.out.print("Enter Son's age: ");
+	    int sAge = scanner.nextInt();
 
-        } catch (WrongAgeException | InvalidSonAgeException e) {
-            System.out.println("Exception: " + e.getMessage());
-        }
 
-        try {
-            
-            System.out.println("\nCase 4: Invalid son's negative age\n");
-            Son son4 = new Son(40, -5); 
+            Son son1 = new Son(fAge, sAge); 
 
         } catch (WrongAgeException | InvalidSonAgeException e) {
             System.out.println("Exception: " + e.getMessage());

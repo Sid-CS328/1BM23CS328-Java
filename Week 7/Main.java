@@ -47,11 +47,11 @@ public class Main {
     public static void main(String[] args) {
         try {
             
-            System.out.println("Test 1: Valid ages\n");
+            System.out.println("Case 1: Valid ages\n");
             Son son1 = new Son(45, 20); 
 
             
-            System.out.println("\nTest 2: Invalid father's age\n");
+            System.out.println("\nCase 2: Invalid father's age\n");
             Son son2 = new Son(-1, 20); 
 
         } catch (WrongAgeException | InvalidSonAgeException e) {
@@ -60,7 +60,7 @@ public class Main {
 
         try {
             
-            System.out.println("\nTest 3: Invalid son's age\n");
+            System.out.println("\nCase 3: Invalid son's age\n");
             Son son3 = new Son(30, 30); 
 
         } catch (WrongAgeException | InvalidSonAgeException e) {
@@ -69,7 +69,7 @@ public class Main {
 
         try {
             
-            System.out.println("\nTest 4: Invalid son's negative age\n");
+            System.out.println("\nCase 4: Invalid son's negative age\n");
             Son son4 = new Son(40, -5); 
 
         } catch (WrongAgeException | InvalidSonAgeException e) {
